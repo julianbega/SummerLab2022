@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1af6b95c77fd9924b9c1baad61b26765, type: 3}
   m_Name: EggRarity1
   m_EditorClassIdentifier: 
+  price: 100
   head:
   - part: {fileID: 919132149155446097, guid: 855f8d14bb31523439908bfc9c42abc5, type: 3}
     chance: 50
