@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: EasyLvl
   m_EditorClassIdentifier: 
   dificulty: 0
-  notTargetCuantity: 0
-  TargetCuantity: 0
-  minSpeed: 0
-  maxSpeed: 0
+  notTargetCuantity: 4
+  TargetCuantity: 2
+  minSpeed: 0.5
+  maxSpeed: 3
+  timeToMemorice: 3
+  timeToPlay: 20

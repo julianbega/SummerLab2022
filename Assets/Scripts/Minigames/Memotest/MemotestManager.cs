@@ -101,7 +101,7 @@ public class MemotestManager : MonoBehaviour
         {
             Vector3 auxSpawnPos = Random.insideUnitCircle * Radius;
             Vector3 spawnPos = new Vector3(auxSpawnPos.x, auxSpawnPos.y, 10.5f);
-            Instantiate(notTargets[Random.Range(0, (notTargets.Count - 1))], spawnPos, Quaternion.identity);
+            Instantiate(notTargets[Random.Range(0, (notTargets.Count))], spawnPos, Quaternion.identity);
         }
     }  
 
