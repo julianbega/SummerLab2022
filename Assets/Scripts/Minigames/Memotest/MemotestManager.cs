@@ -1,0 +1,128 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MemotestManager : MonoBehaviour
+{
+    public enum type
+    {
+        Postre = 0, Vegetal, Fruta, Carne
+    }
+
+    public List<MemotestLevelSO> levels;
+    public MemotestLevelSO currentLevel;
+    public GameObject target;
+
+    public dif dificulty;
+    private int targetType;
+
+
+    public List<GameObject> notTargets;
+    public int targetCount;
+
+
+    public GameObject carnePrefab;
+    public GameObject frutaPrefab;
+    public GameObject vegetalPrefab;
+    public GameObject postrePrefab;
+
+    public float Radius = 1;
+    public float timer;
+    public bool started;
+
+    void Start()
+    {
+        started = false;
+        timer = -100;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+        }
+        if (timer <= 0 && !started)
+        {
+            timer = currentLevel.timeToPlay;
+            startMoving();
+        }
+        if (timer <= 0 && started == true)
+        {
+            Defeat();
+        }
+
+    }
+
+    void InitLevel()
+    {
+        timer = currentLevel.timeToMemorice;
+        targetType = Random.Range(0, 3);
+        switch (targetType)
+        {
+            case 0:
+                target = postrePrefab;
+                notTargets.Add(carnePrefab);
+                notTargets.Add(frutaPrefab);
+                notTargets.Add(vegetalPrefab);
+                break;
+            case 1:
+                target = vegetalPrefab;
+                notTargets.Add(carnePrefab);
+                notTargets.Add(frutaPrefab);
+                notTargets.Add(postrePrefab);
+                break;
+            case 2:
+                target = frutaPrefab;
+                notTargets.Add(carnePrefab);
+                notTargets.Add(postrePrefab);
+                notTargets.Add(vegetalPrefab);
+                break;
+            case 3:
+                target = carnePrefab;
+                notTargets.Add(postrePrefab);
+                notTargets.Add(frutaPrefab);
+                notTargets.Add(vegetalPrefab);
+                break;
+
+            default:
+                break;
+        }
+
+
+        for (int i = 0; i < currentLevel.TargetCuantity; i++)
+        {
+            Vector3 auxSpawnPos = Random.insideUnitCircle * Radius;
+            Vector3 spawnPos = new Vector3(auxSpawnPos.x, auxSpawnPos.y, 10.5f);
+            Instantiate(target, spawnPos, Quaternion.identity);
+        }
+        for (int i = 0; i < currentLevel.notTargetCuantity; i++)
+        {
+            Vector3 auxSpawnPos = Random.insideUnitCircle * Radius;
+            Vector3 spawnPos = new Vector3(auxSpawnPos.x, auxSpawnPos.y, 10.5f);
+            Instantiate(notTargets[Random.Range(0, (notTargets.Count - 1))], spawnPos, Quaternion.identity);
+        }
+    }  
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(this.transform.position, Radius);
+    }
+
+    public void setDificulty(int id)
+    {
+        currentLevel = levels[id];
+        InitLevel();
+    }
+    void startMoving()
+    {
+        started = true;
+    }
+
+    public void Defeat()
+    {
+        Debug.Log("defeated");
+    }
+}

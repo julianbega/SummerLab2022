@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - galleryCharacter
+  - Wall
+  - VerticalWall
+  - HorizontalWall
   layers:
   - Default
   - TransparentFX
