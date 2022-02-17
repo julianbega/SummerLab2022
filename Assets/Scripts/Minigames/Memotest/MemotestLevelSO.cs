@@ -17,6 +17,7 @@ public class MemotestLevelSO : ScriptableObject
     public float maxSpeed;
     public float timeToMemorice;
     public float timeToPlay;
+    public int priceQuantity;
 
 }
 

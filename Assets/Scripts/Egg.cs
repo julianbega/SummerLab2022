@@ -13,6 +13,9 @@ public class partChance
 [CreateAssetMenu]
 public class Egg : ScriptableObject
 {
+    public GameObject EggPrefab;
+    public GameObject BrokenEggPrefab;
+    public GameObject AlmostBrokenEggPrefab;
     public int price;
     public List<partChance> head;
     public List<partChance> body;

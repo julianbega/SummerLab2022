@@ -6,7 +6,7 @@ public class MemotestManager : MonoBehaviour
 {
     public enum type
     {
-        Postre = 0, Vegetal, Fruta, Carne
+        PostreBox = 0, VegetalBox, FrutaBox, CarneBox
     }
 
     public List<MemotestLevelSO> levels;
@@ -34,6 +34,7 @@ public class MemotestManager : MonoBehaviour
     {
         started = false;
         timer = -100;
+       
     }
 
     // Update is called once per frame
@@ -57,6 +58,7 @@ public class MemotestManager : MonoBehaviour
 
     void InitLevel()
     {
+        targetCount = currentLevel.TargetCuantity;
         timer = currentLevel.timeToMemorice;
         targetType = Random.Range(0, 3);
         switch (targetType)
