@@ -10,6 +10,8 @@ using UnityEngine.EventSystems;
 public class MinigamesUI : MonoBehaviour
 {
     public GameObject dificultyPanel;
+    public GameObject victoryPanel;
+    public GameObject defeatPanel;
     public TextMeshProUGUI time;
     public TextMeshProUGUI target;
     public TextMeshProUGUI targetsLeft;
@@ -33,5 +35,24 @@ public class MinigamesUI : MonoBehaviour
         target.text = "Target = " + mm.target.GetComponent<MemotestBox>().tipo.ToString();
         }
         targetsLeft.text = "Targets left = " + mm.targetCount;
+
+        if(mm.victoy)
+        {
+            victoryPanel.SetActive(true);
+        }
+        if(mm.defeat)
+        {
+            defeatPanel.SetActive(true);
+        }
+    }
+    public void HideVictoryPanel()
+    {
+        Debug.Log(" hide Victory");
+        victoryPanel.SetActive(false);
+    }
+    public void HideDefeatPanel()
+    {
+        Debug.Log(" hide defeat");
+        defeatPanel.SetActive(false);
     }
 }

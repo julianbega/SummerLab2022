@@ -29,9 +29,14 @@ public class MemotestManager : MonoBehaviour
     public float Radius = 1;
     public float timer;
     public bool started;
+    public bool victoy;
+    public bool defeat;
 
+    
     void Start()
     {
+        victoy = false;
+        defeat = false;
         started = false;
         timer = -100;
        
@@ -46,12 +51,20 @@ public class MemotestManager : MonoBehaviour
         }
         if (timer <= 0 && !started)
         {
+            if (currentLevel != null)
+            { 
             timer = currentLevel.timeToPlay;
             startMoving();
+            }
         }
         if (timer <= 0 && started == true)
         {
+
             Defeat();
+        }
+        if(targetCount <= 0 && started == true)
+        {
+            Victory();
         }
 
     }
@@ -125,6 +138,35 @@ public class MemotestManager : MonoBehaviour
 
     public void Defeat()
     {
-        Debug.Log("defeated");
+        StartCoroutine("WaitDefeat");
+    }
+    public void Victory()
+    {
+      
+        StartCoroutine("WaitVictory");
+    }
+
+    IEnumerator WaitVictory()
+    {
+        yield return new WaitForSeconds(2f);
+        victoy = true;
+        started = false;
+        timer = -100;
+        
+    }
+    IEnumerator WaitDefeat()
+    {
+        yield return new WaitForSeconds(2f);
+        defeat = true;
+        started = false;
+        timer = -100;
+    }
+
+    public void Restart()
+    {
+        victoy = false;
+        defeat = false;
+        started = false;
+        InitLevel();
     }
 }

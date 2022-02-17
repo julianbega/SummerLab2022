@@ -41,6 +41,10 @@ public class MemotestBox : MonoBehaviour
                 this.transform.SetPositionAndRotation(this.transform.position, new Quaternion(0, 180, 0, 0));
             }
         }
+        if(mm.defeat || mm.victoy)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     void OnMouseOver()
