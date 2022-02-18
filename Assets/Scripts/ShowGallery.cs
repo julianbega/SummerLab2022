@@ -8,15 +8,17 @@ public class ShowGallery : MonoBehaviour
     public int index;
     public Characters defaultCharacter;
     Vector3 charGalleryPos;
+    Vector3 charGalleryScale;
 
     GameObject characterHead;
     GameObject characterBody;
     GameObject characterLegs;
     void Start()
     {
-        charGalleryPos = new Vector3(0, 0, 0);
-        index = 0;
         gm = FindObjectOfType<GameManager>();
+        charGalleryPos = new Vector3(0, -0.056f, -0.248f);
+        charGalleryScale = new Vector3(2.5f, 2.5f, 2.5f);
+        index = 0;
         if (gm.selectedCharacter != null)
         {
             characterHead = Instantiate(gm.selectedCharacter.head, charGalleryPos, Quaternion.identity);
@@ -36,6 +38,10 @@ public class ShowGallery : MonoBehaviour
             characterBody = Instantiate(defaultCharacter.body, charGalleryPos, Quaternion.identity);
             characterLegs = Instantiate(defaultCharacter.legs, charGalleryPos, Quaternion.identity);
         }
+
+        characterHead.transform.localScale = charGalleryScale;
+        characterBody.transform.localScale = charGalleryScale;
+        characterLegs.transform.localScale = charGalleryScale;
     }
 
     public void NextCharacter()
@@ -72,6 +78,9 @@ public class ShowGallery : MonoBehaviour
         characterHead = Instantiate(gm.ownedCharacters[index].head, charGalleryPos, Quaternion.identity);        
         characterBody = Instantiate(gm.ownedCharacters[index].body, charGalleryPos, Quaternion.identity);        
         characterLegs = Instantiate(gm.ownedCharacters[index].legs, charGalleryPos, Quaternion.identity);
+        characterHead.transform.localScale = charGalleryScale;
+        characterBody.transform.localScale = charGalleryScale;
+        characterLegs.transform.localScale = charGalleryScale;
     }
 
     void ShowFirstCharacter()
