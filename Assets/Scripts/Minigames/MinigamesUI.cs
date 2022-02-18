@@ -15,8 +15,15 @@ public class MinigamesUI : MonoBehaviour
     public TextMeshProUGUI time;
     public TextMeshProUGUI target;
     public TextMeshProUGUI targetsLeft;
+    public TextMeshProUGUI money;
     public MemotestManager mm;
+    private GameManager gm;
 
+    private void Start()
+    {
+        gm = FindObjectOfType<GameManager>();
+        money.text = ":  :" + + gm.ADNCoin;
+    }
 
     public void hidePanel()
     {
@@ -39,11 +46,13 @@ public class MinigamesUI : MonoBehaviour
         if(mm.victoy)
         {
             victoryPanel.SetActive(true);
+            money.text = ":  :" + + gm.ADNCoin;
         }
         if(mm.defeat)
         {
             defeatPanel.SetActive(true);
         }
+        
     }
     public void HideVictoryPanel()
     {

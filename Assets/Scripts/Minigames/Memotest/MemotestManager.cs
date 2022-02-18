@@ -32,9 +32,13 @@ public class MemotestManager : MonoBehaviour
     public bool victoy;
     public bool defeat;
 
-    
+    private GameManager gm;
+    private bool gameEnded;
+
     void Start()
     {
+        gameEnded = false;
+        gm = FindObjectOfType<GameManager>();
         victoy = false;
         defeat = false;
         started = false;
@@ -45,32 +49,39 @@ public class MemotestManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer > 0)
+        if (!gameEnded)
         {
-            timer -= Time.deltaTime;
-        }
-        if (timer <= 0 && !started)
-        {
-            if (currentLevel != null)
-            { 
-            timer = currentLevel.timeToPlay;
-            startMoving();
+            if (timer > 0)
+            {
+                timer -= Time.deltaTime;
             }
-        }
-        if (timer <= 0 && started == true)
-        {
+            if (timer <= 0 && !started)
+            {
+                if (currentLevel != null)
+                {
+                    timer = currentLevel.timeToPlay;
+                    startMoving();
+                }
+            }
+            if (timer <= 0 && started == true)
+            {
+                gameEnded = true;
 
-            Defeat();
-        }
-        if(targetCount <= 0 && started == true)
-        {
-            Victory();
+                Defeat();
+            }
+            if (targetCount <= 0 && started == true)
+            {
+                gm.ADNCoin += currentLevel.priceQuantity;
+                gameEnded = true;
+                Victory();
+            }
         }
 
     }
 
     void InitLevel()
     {
+        gameEnded = false;
         targetCount = currentLevel.TargetCuantity;
         timer = currentLevel.timeToMemorice;
         targetType = Random.Range(0, 3);
@@ -149,6 +160,7 @@ public class MemotestManager : MonoBehaviour
     IEnumerator WaitVictory()
     {
         yield return new WaitForSeconds(2f);
+        
         victoy = true;
         started = false;
         timer = -100;
@@ -157,6 +169,7 @@ public class MemotestManager : MonoBehaviour
     IEnumerator WaitDefeat()
     {
         yield return new WaitForSeconds(2f);
+        
         defeat = true;
         started = false;
         timer = -100;

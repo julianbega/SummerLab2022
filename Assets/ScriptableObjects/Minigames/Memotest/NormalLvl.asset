@@ -19,4 +19,4 @@ MonoBehaviour:
   maxSpeed: 3
   timeToMemorice: 3
   timeToPlay: 20
-  priceQuantity: 0
+  priceQuantity: 100
