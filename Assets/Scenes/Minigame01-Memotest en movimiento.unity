@@ -299,7 +299,7 @@ MonoBehaviour:
   frutaPrefab: {fileID: 6141172252045117794, guid: 98da49856b4308c428c94650528aa866, type: 3}
   vegetalPrefab: {fileID: 4951088053134916907, guid: 1a2ea3f60a6bb3e4194def87479d2ca5, type: 3}
   postrePrefab: {fileID: 176520531369826358, guid: 4af483db8579d9146b85f6890289206f, type: 3}
-  Radius: 3.4
+  Radius: 3.3
   timer: 0
   started: 0
   victoy: 0
@@ -974,7 +974,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 258526013}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 101805976}
+        m_TargetAssemblyTypeName: MemotestManager, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 683031435}
+        m_TargetAssemblyTypeName: MinigamesUI, Assembly-CSharp
+        m_MethodName: HideDefeatPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &258526013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1617,7 +1641,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 710741022}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 101805976}
+        m_TargetAssemblyTypeName: MemotestManager, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 683031435}
+        m_TargetAssemblyTypeName: MinigamesUI, Assembly-CSharp
+        m_MethodName: HideVictoryPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &710741022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3381,7 +3429,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1749854840}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 683031436}
+        m_TargetAssemblyTypeName: MiddleSceneController, Assembly-CSharp
+        m_MethodName: GoToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1749854840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3502,7 +3562,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1792741487}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 683031436}
+        m_TargetAssemblyTypeName: MiddleSceneController, Assembly-CSharp
+        m_MethodName: GoToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1792741487
 MonoBehaviour:
   m_ObjectHideFlags: 0

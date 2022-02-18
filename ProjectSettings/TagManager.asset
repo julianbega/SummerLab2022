@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - VerticalWall
   - HorizontalWall
+  - Box
   layers:
   - Default
   - TransparentFX
