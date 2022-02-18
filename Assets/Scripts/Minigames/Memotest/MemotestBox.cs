@@ -21,6 +21,14 @@ public class MemotestBox : MonoBehaviour
         mm = FindObjectOfType<MemotestManager>();
         movingDirection.x = Random.Range(-mm.currentLevel.maxSpeed, mm.currentLevel.maxSpeed);
         movingDirection.y = Random.Range(-mm.currentLevel.maxSpeed, mm.currentLevel.maxSpeed);
+        if(movingDirection.x >= 0 && movingDirection.x< mm.currentLevel.minSpeed)
+        {
+            movingDirection.x = mm.currentLevel.minSpeed;
+        }
+        if (movingDirection.x < 0 && movingDirection.x > -mm.currentLevel.minSpeed)
+        {
+            movingDirection.x = -mm.currentLevel.minSpeed;
+        }
         alreadyStart = false;
         alreadyDestroyed = false;
         clicked = false;
