@@ -13,6 +13,7 @@ public class partChance
 [CreateAssetMenu]
 public class Egg : ScriptableObject
 {
+    public string name;
     public GameObject EggPrefab;
     public int price;
     public List<partChance> head;
