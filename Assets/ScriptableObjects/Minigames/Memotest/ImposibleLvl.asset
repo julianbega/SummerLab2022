@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d5db0d98d2a8964084e27bec9609426, type: 3}
-  m_Name: NormalLvl
+  m_Name: ImposibleLvl
   m_EditorClassIdentifier: 
-  dificulty: 1
-  notTargetCuantity: 6
-  TargetCuantity: 2
-  minSpeed: 1
-  maxSpeed: 3
-  timeToMemorice: 3
-  timeToPlay: 20
-  priceQuantity: 0
+  dificulty: 0
+  notTargetCuantity: 0
+  TargetCuantity: 0
+  minSpeed: 0.89
+  maxSpeed: 2.35
+  timeToMemorice: 1.08
+  timeToPlay: 2.87
+  priceQuantity: 76
