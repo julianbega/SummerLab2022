@@ -12,28 +12,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1af6b95c77fd9924b9c1baad61b26765, type: 3}
   m_Name: EggRarity1 3
   m_EditorClassIdentifier: 
+  name: Rainbow Egg
   EggPrefab: {fileID: 884965605999309950, guid: f5b986e827618494e99c82f2bc52c3f6, type: 3}
   price: 100
   head:
   - part: {fileID: 919132149155446097, guid: a70d6a2079f34dd40a55718159247a00, type: 3}
-    chance: 50
+    chance: 15
   - part: {fileID: 919132149155446097, guid: 7e433da08b434204cb170dcd8d758e6b, type: 3}
-    chance: 30
+    chance: 20
   - part: {fileID: 919132149155446097, guid: f305ca51a62e8704b873dcb1a6812370, type: 3}
-    chance: 10
+    chance: 15
   - part: {fileID: 919132149155446097, guid: a112f509dd025e148828f047cbc5e8ad, type: 3}
-    chance: 10
+    chance: 15
+  - part: {fileID: 919132149155446097, guid: 5687d174ae0e4c5449cc06c221269759, type: 3}
+    chance: 20
+  - part: {fileID: 919132149155446097, guid: 28f37766d3951f44f9a595a7bbd60388, type: 3}
+    chance: 15
   body:
   - part: {fileID: 919132149155446097, guid: 798ff1347225098419ae5340c9d2daad, type: 3}
-    chance: 50
-  - part: {fileID: 919132149155446097, guid: 3f26e69c12951c54a9c50fb4b577455d, type: 3}
-    chance: 30
-  - part: {fileID: 919132149155446097, guid: 3de8df645605a3c4f9331f71bc922770, type: 3}
     chance: 20
+  - part: {fileID: 919132149155446097, guid: 3f26e69c12951c54a9c50fb4b577455d, type: 3}
+    chance: 15
+  - part: {fileID: 919132149155446097, guid: 3de8df645605a3c4f9331f71bc922770, type: 3}
+    chance: 15
+  - part: {fileID: 919132149155446097, guid: 35741609b2fbd1e43ba447888dd3accd, type: 3}
+    chance: 20
+  - part: {fileID: 919132149155446097, guid: 1df440a7c8237d645b888bf724065e22, type: 3}
+    chance: 15
+  - part: {fileID: 919132149155446097, guid: a39af64942db40f42b25c7cc525272fd, type: 3}
+    chance: 15
   legs:
   - part: {fileID: 919132149155446097, guid: e4199ad580c9e4741983dc24bf315eb0, type: 3}
-    chance: 50
+    chance: 15
   - part: {fileID: 919132149155446097, guid: e18e9bc6dc4892a458b03c9a2a1b8ebf, type: 3}
-    chance: 30
-  - part: {fileID: 919132149155446097, guid: e4199ad580c9e4741983dc24bf315eb0, type: 3}
+    chance: 15
+  - part: {fileID: 919132149155446097, guid: ba43b932b66d5164a9dba68615d84064, type: 3}
     chance: 20
+  - part: {fileID: 919132149155446097, guid: 0c73ca8103f9bc04eaa8e0d27f39a400, type: 3}
+    chance: 20
+  - part: {fileID: 919132149155446097, guid: 87ebb91f277d0034aacdbad7dc070110, type: 3}
+    chance: 15
+  - part: {fileID: 919132149155446097, guid: e6135e03a81419a42898d9b159be252a, type: 3}
+    chance: 15
