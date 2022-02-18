@@ -9,7 +9,11 @@ using UnityEngine.EventSystems;
 public class StoreUI : MonoBehaviour
 {
     public TextMeshProUGUI money;
+    public TextMeshProUGUI eggName;
+    public TextMeshProUGUI eggPrice;
     private GameManager gm;
+    public ShopManager sm;
+
 
     private void Start()
     {

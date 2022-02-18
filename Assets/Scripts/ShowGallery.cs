@@ -6,7 +6,6 @@ public class ShowGallery : MonoBehaviour
 {
     public GameManager gm;
     public int index;
-    public GameObject showingCharacterParent;
     public Characters defaultCharacter;
     Vector3 charGalleryPos;
 
