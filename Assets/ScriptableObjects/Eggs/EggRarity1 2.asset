@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Tropical Egg
   EggPrefab: {fileID: 3171267767486425429, guid: dcd9ecd45085637409670e53551ceb66, type: 3}
-  price: 100
+  price: 200
   head:
   - part: {fileID: 919132149155446097, guid: a70d6a2079f34dd40a55718159247a00, type: 3}
     chance: 30

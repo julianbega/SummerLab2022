@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Rainbow Egg
   EggPrefab: {fileID: 884965605999309950, guid: f5b986e827618494e99c82f2bc52c3f6, type: 3}
-  price: 100
+  price: 325
   head:
   - part: {fileID: 919132149155446097, guid: a70d6a2079f34dd40a55718159247a00, type: 3}
     chance: 15

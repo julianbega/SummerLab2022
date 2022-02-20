@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dificulty: 1
   notTargetCuantity: 6
-  TargetCuantity: 2
+  TargetCuantity: 3
   minSpeed: 1
   maxSpeed: 3
   timeToMemorice: 3
-  timeToPlay: 20
-  priceQuantity: 100
+  timeToPlay: 25
+  priceQuantity: 25

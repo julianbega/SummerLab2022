@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Regular Egg
   EggPrefab: {fileID: 5648669055420948795, guid: e497abb449d4bc74586e0bc9575393e5, type: 3}
-  price: 100
+  price: 75
   head:
   - part: {fileID: 919132149155446097, guid: a70d6a2079f34dd40a55718159247a00, type: 3}
     chance: 50

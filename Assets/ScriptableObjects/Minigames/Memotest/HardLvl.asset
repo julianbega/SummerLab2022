@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: HardLvl
   m_EditorClassIdentifier: 
   dificulty: 2
-  notTargetCuantity: 6
+  notTargetCuantity: 8
   TargetCuantity: 3
-  minSpeed: 1.3
-  maxSpeed: 3.5
+  minSpeed: 1.5
+  maxSpeed: 4
   timeToMemorice: 2.5
   timeToPlay: 15
-  priceQuantity: 100
+  priceQuantity: 50

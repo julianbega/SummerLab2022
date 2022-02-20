@@ -17,6 +17,6 @@ MonoBehaviour:
   TargetCuantity: 2
   minSpeed: 0.5
   maxSpeed: 3
-  timeToMemorice: 3
-  timeToPlay: 20
-  priceQuantity: 100
+  timeToMemorice: 4
+  timeToPlay: 30
+  priceQuantity: 10
