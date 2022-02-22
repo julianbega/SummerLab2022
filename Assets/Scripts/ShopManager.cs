@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShopManager : MonoBehaviour
 {
     public List<Egg> EggsToSell;
-    private Egg selectedEgg;
+    public Egg selectedEgg;
     public GameObject egg;
     public int index;
     Vector3 eggPosition;

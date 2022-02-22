@@ -13,15 +13,40 @@ public class StoreUI : MonoBehaviour
     public TextMeshProUGUI eggPrice;
     private GameManager gm;
     public ShopManager sm;
-
+    private bool hasEggSelected;
 
     private void Start()
     {
         gm = FindObjectOfType<GameManager>();
-        money.text = ":" + +gm.ADNCoin;
+        hasEggSelected = false;
+        money.text = ":" + gm.ADNCoin;
+        if (sm.selectedEgg != null)
+        {
+            hasEggSelected = true;
+            eggPrice.text = "Price: " + sm.selectedEgg.price;
+            eggName.text = "" + sm.selectedEgg.name;
+        }
     }
 
-   public void UpdateMoney()
+    private void Update()
+    {
+        if (!hasEggSelected)
+        {
+            if (sm.selectedEgg != null)
+            {
+                hasEggSelected = true;
+                eggPrice.text = "Price: " + sm.selectedEgg.price;
+                eggName.text = "" + sm.selectedEgg.name;
+            }
+        }
+    }
+    public void ChangeEgg()
+    {
+        hasEggSelected = true;
+        eggPrice.text = "Price: " + sm.selectedEgg.price;
+        eggName.text = "" + sm.selectedEgg.name;
+    }
+    public void UpdateMoney()
     {
         money.text = ":" + +gm.ADNCoin;
     }

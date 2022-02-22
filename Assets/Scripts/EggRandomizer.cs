@@ -17,6 +17,12 @@ public class EggRandomizer : MonoBehaviour
     }
     public void randomize()
     {
+        if (gm.ADNCoin >= eggSelected.price)
+        {
+            gm.ADNCoin -= eggSelected.price;
+
+
+
         RandomizeHead();
         RandomizeBody();
         RandomizeLegs();
@@ -29,6 +35,7 @@ public class EggRandomizer : MonoBehaviour
         newCharacter.legs = selectedLeg;
 
         gm.ownedCharacters.Add(newCharacter);
+        }
     }
 
     public void RandomizeHead()
