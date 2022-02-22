@@ -11,4 +11,7 @@ public class Characters : ScriptableObject
     public GameObject head;
     public GameObject body;
     public GameObject legs;
+    public Material headMat;
+    public Material bodyMat;
+    public Material legsMat;
 }

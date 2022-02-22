@@ -7,9 +7,13 @@ public class EggRandomizer : MonoBehaviour
     public GameManager gm;
     public Egg eggSelected;
     float selectedNumber;
+    float matSelectedNumber;
     public GameObject selectedBody;
     public GameObject selectedHead;
     public GameObject selectedLeg;
+    public Material selectedBodyMat;
+    public Material selectedHeadMat;
+    public Material selectedLegMat;
 
     private void Start()
     {
@@ -33,6 +37,9 @@ public class EggRandomizer : MonoBehaviour
         newCharacter.head = selectedHead;
         newCharacter.body = selectedBody;
         newCharacter.legs = selectedLeg;
+        newCharacter.headMat = selectedHeadMat;
+        newCharacter.bodyMat = selectedBodyMat;
+        newCharacter.legsMat = selectedLegMat;
 
         gm.ownedCharacters.Add(newCharacter);
         }
@@ -41,33 +48,59 @@ public class EggRandomizer : MonoBehaviour
     public void RandomizeHead()
     {
         selectedNumber = Random.Range(0.00f, 100.00f);
-        Debug.Log("Head " + selectedNumber);
+        matSelectedNumber = Random.Range(0.00f, 100.00f);
+
         for (int j = 0; j < eggSelected.head.Count; j++)
         {
-            Debug.Log("SelectedHead chance " + eggSelected.head[j].chance);
             if (eggSelected.head[j].chance >= selectedNumber)
             {
                 selectedHead = eggSelected.head[j].part;
-                return;
+                
+                for (int k = 0; k < eggSelected.head[j].materials.Count; k++)
+                {
+                    if(eggSelected.head[j].materials[k].chance >= matSelectedNumber)
+                    {
+                        selectedHeadMat = eggSelected.head[j].materials[k].mat;
+                        return;
+                    }
+                    else
+                    {
+                        matSelectedNumber -= eggSelected.head[j].materials[k].chance;
+                    }
+                }
+                
             }
             else
             {
                 selectedNumber -= eggSelected.head[j].chance;
             }
         }
+
+
     }
 
     public void RandomizeBody()
     {
         selectedNumber = Random.Range(0.00f, 100.00f);
-        Debug.Log("Body " + selectedNumber);
+        matSelectedNumber = Random.Range(0.00f, 100.00f);
+
         for (int i = 0; i < eggSelected.body.Count; i++)
         {
-            Debug.Log("SelectedBody chance " + eggSelected.body[i].chance);
             if (eggSelected.body[i].chance >= selectedNumber)
             {
                 selectedBody = eggSelected.body[i].part;
-                return;
+                for (int m = 0; m < eggSelected.body[i].materials.Count; m++)
+                {
+                    if (eggSelected.body[i].materials[m].chance >= matSelectedNumber)
+                    {
+                        selectedHeadMat = eggSelected.body[i].materials[m].mat;
+                        return;
+                    }
+                    else
+                    {
+                        matSelectedNumber -= eggSelected.body[i].materials[m].chance;
+                    }
+                }
             }
             else
             {
@@ -79,14 +112,25 @@ public class EggRandomizer : MonoBehaviour
     public void RandomizeLegs()
     {
         selectedNumber = Random.Range(0.00f, 100.00f);
-        Debug.Log("Legs " + selectedNumber);
+        matSelectedNumber = Random.Range(0.00f, 100.00f);
+
         for (int l = 0; l < eggSelected.legs.Count; l++)
         {
-            Debug.Log("SelectedLegs chance " + eggSelected.body[l].chance);
             if (eggSelected.legs[l].chance >= selectedNumber)
             {
                 selectedLeg = eggSelected.legs[l].part;
-                return;
+                for (int n = 0; n < eggSelected.legs[l].materials.Count; n++)
+                {
+                    if (eggSelected.legs[l].materials[n].chance >= matSelectedNumber)
+                    {
+                        selectedHeadMat = eggSelected.legs[l].materials[n].mat;
+                        return;
+                    }
+                    else
+                    {
+                        matSelectedNumber -= eggSelected.legs[l].materials[n].chance;
+                    }
+                }
             }
             else
             {

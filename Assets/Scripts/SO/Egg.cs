@@ -9,6 +9,13 @@ public class partChance
 {
     public GameObject part;
     public float chance;
+    public List<matChance> materials;
+}
+[System.Serializable]
+public class matChance
+{
+    public Material mat;
+    public float chance;
 }
 [CreateAssetMenu]
 public class Egg : ScriptableObject

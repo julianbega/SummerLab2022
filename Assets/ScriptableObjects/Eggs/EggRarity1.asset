@@ -18,21 +18,32 @@ MonoBehaviour:
   head:
   - part: {fileID: 919132149155446097, guid: a70d6a2079f34dd40a55718159247a00, type: 3}
     chance: 50
+    materials: []
   - part: {fileID: 919132149155446097, guid: 7e433da08b434204cb170dcd8d758e6b, type: 3}
     chance: 30
+    materials: []
   - part: {fileID: 919132149155446097, guid: f305ca51a62e8704b873dcb1a6812370, type: 3}
     chance: 20
+    materials: []
   body:
   - part: {fileID: 919132149155446097, guid: 798ff1347225098419ae5340c9d2daad, type: 3}
     chance: 30
+    materials:
+    - mat: {fileID: 2100000, guid: d787b289b96897a48a1455b56cf9389e, type: 2}
+      chance: 100
   - part: {fileID: 919132149155446097, guid: 1df440a7c8237d645b888bf724065e22, type: 3}
     chance: 50
+    materials: []
   - part: {fileID: 919132149155446097, guid: 35741609b2fbd1e43ba447888dd3accd, type: 3}
     chance: 20
+    materials: []
   legs:
   - part: {fileID: 919132149155446097, guid: e4199ad580c9e4741983dc24bf315eb0, type: 3}
     chance: 35
+    materials: []
   - part: {fileID: 919132149155446097, guid: ba43b932b66d5164a9dba68615d84064, type: 3}
     chance: 45
+    materials: []
   - part: {fileID: 919132149155446097, guid: e4199ad580c9e4741983dc24bf315eb0, type: 3}
     chance: 20
+    materials: []
