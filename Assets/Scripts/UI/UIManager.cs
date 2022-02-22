@@ -21,7 +21,7 @@ public class UIManager : MonoBehaviour
     Vector3 pos;
     Quaternion rot;
     Vector3 scale;
-
+    MeshRenderer[] headChildrens;
     private void Start()
     {
         gm = FindObjectOfType<GameManager>();
@@ -34,6 +34,13 @@ public class UIManager : MonoBehaviour
             characterHead = Instantiate(gm.selectedCharacter.head, pos, rot);
             characterBody = Instantiate(gm.selectedCharacter.body, pos, rot);
             characterLegs = Instantiate(gm.selectedCharacter.legs, pos, rot);
+            headChildrens = characterHead.GetComponentsInChildren<MeshRenderer>();
+            for (int i = 0; i < headChildrens.Length; i++)
+            {
+                headChildrens[i].material = gm.selectedCharacter.headMat;
+            }
+            characterBody.GetComponentInChildren<MeshRenderer>().material = gm.selectedCharacter.bodyMat;
+            characterLegs.GetComponentInChildren<MeshRenderer>().material = gm.selectedCharacter.legsMat;
             characterHead.transform.localScale = scale;
             characterBody.transform.localScale = scale;
             characterLegs.transform.localScale = scale;
