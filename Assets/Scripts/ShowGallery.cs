@@ -111,9 +111,7 @@ public class ShowGallery : MonoBehaviour
     }
     public void SelectCharacter()
     {
-        gm.selectedCharacter.head = characterHead;
-        gm.selectedCharacter.body = characterBody;
-        gm.selectedCharacter.legs = characterLegs;
+        gm.selectedCharacter = gm.ownedCharacters[index];
     }
 
     public void RotateLeft()

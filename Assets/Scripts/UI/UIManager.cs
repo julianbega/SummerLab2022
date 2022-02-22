@@ -14,10 +14,30 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI money;
     private GameManager gm;
 
+    GameObject characterHead;
+    GameObject characterBody;
+    GameObject characterLegs;
+
+    Vector3 pos;
+    Quaternion rot;
+    Vector3 scale;
+
     private void Start()
     {
         gm = FindObjectOfType<GameManager>();
         money.text = ":  :" + gm.ADNCoin;
+        pos = new Vector3(0f, 0f, -0.1f);
+        scale = new Vector3(2.5f, 2.5f, 2.5f);
+        rot = new Quaternion(0, 180, 0, 0);
+        if (gm.selectedCharacter != null)
+        {
+            characterHead = Instantiate(gm.selectedCharacter.head, pos, rot);
+            characterBody = Instantiate(gm.selectedCharacter.body, pos, rot);
+            characterLegs = Instantiate(gm.selectedCharacter.legs, pos, rot);
+            characterHead.transform.localScale = scale;
+            characterBody.transform.localScale = scale;
+            characterLegs.transform.localScale = scale;
+        }
     }
 
     public void showMenu()
