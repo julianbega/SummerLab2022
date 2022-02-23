@@ -7,6 +7,7 @@ using System.Collections;
 using UnityEngine.EventSystems;
 
 
+
 public class MinigamesUI : MonoBehaviour
 {
     public GameObject dificultyPanel;
@@ -16,7 +17,10 @@ public class MinigamesUI : MonoBehaviour
     public TextMeshProUGUI target;
     public TextMeshProUGUI targetsLeft;
     public TextMeshProUGUI money;
+    public TextMeshProUGUI moneyGained;
     public MemotestManager mm;
+    public Image foodIcon;
+    public Sprite secret;
     private GameManager gm;
 
     private void Start()
@@ -32,21 +36,24 @@ public class MinigamesUI : MonoBehaviour
 
     public void Update()
     {
-        time.text = "Time: " + Mathf.Round(mm.timer * 100.0f) * 0.01f;
+        time.text = "" + Mathf.Round(mm.timer * 100.0f) * 0.01f;
         if(mm.started == false)
         {
             target.text = "Target = ???";
+            foodIcon.sprite = secret;
         }
         else
         { 
-        target.text = "Target = " + mm.target.GetComponent<MemotestBox>().tipo.ToString();
+        target.text = "" + mm.target.GetComponent<MemotestBox>().tipo.ToString();
+            foodIcon.sprite = mm.target.GetComponent<MemotestBox>().imagen;
         }
-        targetsLeft.text = "Targets left = " + mm.targetCount;
+        targetsLeft.text = "" + mm.targetCount;
 
         if(mm.victoy)
         {
             victoryPanel.SetActive(true);
             money.text = ":  :" + + gm.ADNCoin;
+            moneyGained.text = "" + mm.currentLevel.priceQuantity;
         }
         if(mm.defeat)
         {

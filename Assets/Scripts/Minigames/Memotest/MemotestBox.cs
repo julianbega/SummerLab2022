@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MemotestBox : MonoBehaviour
 {
@@ -16,6 +18,7 @@ public class MemotestBox : MonoBehaviour
     private bool clicked;
     private string targetType;
     private bool alreadyDestroyed;
+    public Sprite imagen;
     private void Start()
     {
         mm = FindObjectOfType<MemotestManager>();
