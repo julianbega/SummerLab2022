@@ -27,10 +27,22 @@ MonoBehaviour:
       chance: 40
   - part: {fileID: 919132149155446097, guid: 7e433da08b434204cb170dcd8d758e6b, type: 3}
     chance: 60
-    materials: []
+    materials:
+    - mat: {fileID: 2100000, guid: c26903d7d23173a46b1e425a862d1590, type: 2}
+      chance: 45
+    - mat: {fileID: 2100000, guid: 55f3c0ed8e2b8a1488c9e39b51711e84, type: 2}
+      chance: 45
+    - mat: {fileID: 2100000, guid: 8b626f00055dc7543ae03662b69a3914, type: 2}
+      chance: 10
   - part: {fileID: 919132149155446097, guid: f305ca51a62e8704b873dcb1a6812370, type: 3}
     chance: 10
-    materials: []
+    materials:
+    - mat: {fileID: 2100000, guid: e941e7c03dde5d0499fc268b49862221, type: 2}
+      chance: 35
+    - mat: {fileID: 2100000, guid: c195e36afc5f7844f95b6da076aaa65a, type: 2}
+      chance: 35
+    - mat: {fileID: 2100000, guid: 30cbe7e51501f04479c1467dcabb2cd3, type: 2}
+      chance: 30
   - part: {fileID: 919132149155446097, guid: a112f509dd025e148828f047cbc5e8ad, type: 3}
     chance: 10
     materials: []
@@ -43,14 +55,36 @@ MonoBehaviour:
     materials: []
   - part: {fileID: 919132149155446097, guid: 3de8df645605a3c4f9331f71bc922770, type: 3}
     chance: 20
-    materials: []
+    materials:
+    - mat: {fileID: 2100000, guid: 96c657d8da3ed214490e955d6fb08342, type: 2}
+      chance: 35
+    - mat: {fileID: 2100000, guid: c2a6a591bf61f6143890cfc0494e8b26, type: 2}
+      chance: 35
+    - mat: {fileID: 2100000, guid: fbd8a318a40630c4db605f177fcaa2e7, type: 2}
+      chance: 15
+    - mat: {fileID: 2100000, guid: 4f19352f6ba6c9041b65b5cb08b455f3, type: 2}
+      chance: 15
   legs:
   - part: {fileID: 919132149155446097, guid: 87ebb91f277d0034aacdbad7dc070110, type: 3}
     chance: 50
-    materials: []
+    materials:
+    - mat: {fileID: 2100000, guid: b1c045022a35e264fa90f2c45c59657a, type: 2}
+      chance: 50
+    - mat: {fileID: 2100000, guid: 58d14f3a2fef7ad4ca6296a08cdbabbf, type: 2}
+      chance: 50
   - part: {fileID: 919132149155446097, guid: e18e9bc6dc4892a458b03c9a2a1b8ebf, type: 3}
     chance: 30
-    materials: []
+    materials:
+    - mat: {fileID: 2100000, guid: 49a79d1db7fb82e47b0eac08e1d12a8e, type: 2}
+      chance: 50
+    - mat: {fileID: 2100000, guid: f748d7a570f1ab742a1a991cdec681ea, type: 2}
+      chance: 50
   - part: {fileID: 919132149155446097, guid: e6135e03a81419a42898d9b159be252a, type: 3}
     chance: 20
-    materials: []
+    materials:
+    - mat: {fileID: 2100000, guid: 8b626f00055dc7543ae03662b69a3914, type: 2}
+      chance: 35
+    - mat: {fileID: 2100000, guid: c26903d7d23173a46b1e425a862d1590, type: 2}
+      chance: 35
+    - mat: {fileID: 2100000, guid: 55f3c0ed8e2b8a1488c9e39b51711e84, type: 2}
+      chance: 30
