@@ -93,7 +93,7 @@ public class EggRandomizer : MonoBehaviour
                 {
                     if (eggSelected.body[i].materials[m].chance >= matSelectedNumber)
                     {
-                        selectedHeadMat = eggSelected.body[i].materials[m].mat;
+                        selectedBodyMat = eggSelected.body[i].materials[m].mat;
                         return;
                     }
                     else
@@ -123,7 +123,7 @@ public class EggRandomizer : MonoBehaviour
                 {
                     if (eggSelected.legs[l].materials[n].chance >= matSelectedNumber)
                     {
-                        selectedHeadMat = eggSelected.legs[l].materials[n].mat;
+                        selectedLegMat = eggSelected.legs[l].materials[n].mat;
                         return;
                     }
                     else

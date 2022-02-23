@@ -17,7 +17,6 @@ public class ShowGallery : MonoBehaviour
     public float rotationSpeed;
     Quaternion characterOrientation;
 
-    MeshRenderer[] headChildrens;
     void Start()
     {
         rotation = 0;
@@ -31,11 +30,7 @@ public class ShowGallery : MonoBehaviour
             characterHead = Instantiate(gm.selectedCharacter.head, charGalleryPos, Quaternion.identity);
             characterBody = Instantiate(gm.selectedCharacter.body, charGalleryPos, Quaternion.identity);
             characterLegs = Instantiate(gm.selectedCharacter.legs, charGalleryPos, Quaternion.identity);
-            headChildrens = characterHead.GetComponentsInChildren<MeshRenderer>();
-            for (int i = 0; i < headChildrens.Length; i++)
-            {
-                headChildrens[i].material = gm.selectedCharacter.headMat;
-            }
+            characterHead.GetComponentInChildren<MeshRenderer>().material = gm.selectedCharacter.headMat;
             characterBody.GetComponentInChildren<MeshRenderer>().material = gm.selectedCharacter.bodyMat;
             characterLegs.GetComponentInChildren<MeshRenderer>().material = gm.selectedCharacter.legsMat;
         }
@@ -44,11 +39,7 @@ public class ShowGallery : MonoBehaviour
             characterHead = Instantiate(gm.ownedCharacters[index].head, charGalleryPos, Quaternion.identity);
             characterBody = Instantiate(gm.ownedCharacters[index].body, charGalleryPos, Quaternion.identity);
             characterLegs = Instantiate(gm.ownedCharacters[index].legs, charGalleryPos, Quaternion.identity);
-            headChildrens = characterHead.GetComponentsInChildren<MeshRenderer>();
-            for (int i = 0; i < headChildrens.Length; i++)
-            {
-                headChildrens[i].material = gm.ownedCharacters[index].headMat;
-            }
+            characterHead.GetComponentInChildren<MeshRenderer>().material = gm.ownedCharacters[index].headMat;
             characterBody.GetComponentInChildren<MeshRenderer>().material = gm.ownedCharacters[index].bodyMat;
             characterLegs.GetComponentInChildren<MeshRenderer>().material = gm.ownedCharacters[index].legsMat;
 
@@ -58,11 +49,8 @@ public class ShowGallery : MonoBehaviour
             characterHead = Instantiate(defaultCharacter.head, charGalleryPos, Quaternion.identity);
             characterBody = Instantiate(defaultCharacter.body, charGalleryPos, Quaternion.identity);
             characterLegs = Instantiate(defaultCharacter.legs, charGalleryPos, Quaternion.identity);
-            headChildrens = characterHead.GetComponentsInChildren<MeshRenderer>();
-            for (int i = 0; i < headChildrens.Length; i++)
-            {
-                headChildrens[i].material = defaultCharacter.headMat;
-            }
+
+            characterHead.GetComponentInChildren<MeshRenderer>().material = defaultCharacter.headMat;
             characterBody.GetComponentInChildren<MeshRenderer>().material = defaultCharacter.bodyMat;
             characterLegs.GetComponentInChildren<MeshRenderer>().material = defaultCharacter.legsMat;
         }
@@ -112,11 +100,8 @@ public class ShowGallery : MonoBehaviour
         characterHead = Instantiate(gm.ownedCharacters[index].head, charGalleryPos, Quaternion.identity);        
         characterBody = Instantiate(gm.ownedCharacters[index].body, charGalleryPos, Quaternion.identity);        
         characterLegs = Instantiate(gm.ownedCharacters[index].legs, charGalleryPos, Quaternion.identity);
-        headChildrens = characterHead.GetComponentsInChildren<MeshRenderer>();
-        for (int i = 0; i < headChildrens.Length; i++)
-        {
-            headChildrens[i].material = gm.ownedCharacters[index].headMat;
-        }
+
+        characterHead.GetComponentInChildren<MeshRenderer>().material = gm.ownedCharacters[index].headMat;
         characterBody.GetComponentInChildren<MeshRenderer>().material = gm.ownedCharacters[index].bodyMat;
         characterLegs.GetComponentInChildren<MeshRenderer>().material = gm.ownedCharacters[index].legsMat;
         characterHead.transform.localScale = charGalleryScale;

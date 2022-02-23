@@ -1022,7 +1022,7 @@ MonoBehaviour:
   gm: {fileID: 0}
   index: 0
   defaultCharacter: {fileID: 0}
-  rotationSpeed: 0.01
+  rotationSpeed: 40
 --- !u!114 &1002976473
 MonoBehaviour:
   m_ObjectHideFlags: 0

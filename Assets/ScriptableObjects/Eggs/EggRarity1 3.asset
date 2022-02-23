@@ -16,7 +16,7 @@ MonoBehaviour:
   EggPrefab: {fileID: 884965605999309950, guid: f5b986e827618494e99c82f2bc52c3f6, type: 3}
   price: 325
   head:
-  - part: {fileID: 919132149155446097, guid: a70d6a2079f34dd40a55718159247a00, type: 3}
+  - part: {fileID: 919132149155446097, guid: 97c8a863a3c6da5418b3807327b8c9e6, type: 3}
     chance: 15
     materials:
     - mat: {fileID: 2100000, guid: 58d14f3a2fef7ad4ca6296a08cdbabbf, type: 2}
@@ -25,7 +25,7 @@ MonoBehaviour:
       chance: 30
     - mat: {fileID: 2100000, guid: 6895bf501202709469a27f7d6fba03b7, type: 2}
       chance: 35
-  - part: {fileID: 919132149155446097, guid: 7e433da08b434204cb170dcd8d758e6b, type: 3}
+  - part: {fileID: 919132149155446097, guid: 57891c0587210cd458426c78b8e37f14, type: 3}
     chance: 20
     materials:
     - mat: {fileID: 2100000, guid: 8167ffb592474a64c9002f86ee65584d, type: 2}
@@ -36,7 +36,7 @@ MonoBehaviour:
       chance: 25
     - mat: {fileID: 2100000, guid: 55f3c0ed8e2b8a1488c9e39b51711e84, type: 2}
       chance: 25
-  - part: {fileID: 919132149155446097, guid: f305ca51a62e8704b873dcb1a6812370, type: 3}
+  - part: {fileID: 919132149155446097, guid: ee5fdeaf6b0572643890fb58a47c9676, type: 3}
     chance: 15
     materials:
     - mat: {fileID: 2100000, guid: c195e36afc5f7844f95b6da076aaa65a, type: 2}
@@ -45,7 +45,7 @@ MonoBehaviour:
       chance: 30
     - mat: {fileID: 2100000, guid: 30cbe7e51501f04479c1467dcabb2cd3, type: 2}
       chance: 35
-  - part: {fileID: 919132149155446097, guid: a112f509dd025e148828f047cbc5e8ad, type: 3}
+  - part: {fileID: 919132149155446097, guid: 7c4ebb1f3f0ae3c40adbcc3ba6173442, type: 3}
     chance: 15
     materials:
     - mat: {fileID: 2100000, guid: c2a6a591bf61f6143890cfc0494e8b26, type: 2}
@@ -56,7 +56,7 @@ MonoBehaviour:
       chance: 25
     - mat: {fileID: 2100000, guid: 4f19352f6ba6c9041b65b5cb08b455f3, type: 2}
       chance: 25
-  - part: {fileID: 919132149155446097, guid: 5687d174ae0e4c5449cc06c221269759, type: 3}
+  - part: {fileID: 919132149155446097, guid: c7a2d8704a5a1d141979730c63ddf483, type: 3}
     chance: 20
     materials:
     - mat: {fileID: 2100000, guid: f748d7a570f1ab742a1a991cdec681ea, type: 2}
@@ -65,7 +65,7 @@ MonoBehaviour:
       chance: 35
     - mat: {fileID: 2100000, guid: 712073c9ee2a6de4daef2f418e03bd0c, type: 2}
       chance: 30
-  - part: {fileID: 919132149155446097, guid: 28f37766d3951f44f9a595a7bbd60388, type: 3}
+  - part: {fileID: 919132149155446097, guid: f40349b0a3f668945a3024ed0f3b40af, type: 3}
     chance: 15
     materials:
     - mat: {fileID: 2100000, guid: 2807cc8201d27d3458c67ba291a97c46, type: 2}
