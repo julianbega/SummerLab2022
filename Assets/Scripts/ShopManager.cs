@@ -16,7 +16,7 @@ public class ShopManager : MonoBehaviour
         index = 0;
         selectedEgg = EggsToSell[index];
         egg = selectedEgg.EggPrefab;
-        eggPosition = new Vector3(0.01f, 0.05f, 0.05f);
+        eggPosition = new Vector3(0.01f, 0.075f, 0.05f);
         egg = Instantiate(selectedEgg.EggPrefab, eggPosition, Quaternion.identity); 
     }
     public void ChangeNextEgg()
