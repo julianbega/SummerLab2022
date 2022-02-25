@@ -4,8 +4,8 @@ using UnityEngine;
 
 
 
-[CreateAssetMenu]
-public class Characters : ScriptableObject
+[System.Serializable]
+public class Characters 
 {
     public string characterName;
     public GameObject head;

@@ -12,10 +12,12 @@ public class GameManager : MonoBehaviour
     public List<Material> Materials;
     public List<GameObject> Models;
 
-    Characters loadCharacter;
     static public GameManager instanceGameManager;
 
-    private int firstTime;
+    const int cabezaGallina = 1;
+    const int cuerpoGallina = 7;
+    const int piernasGallina = 13;
+    const int matGallina = 3;
     static public GameManager instance { get { return instanceGameManager; } }
     
 
@@ -38,14 +40,12 @@ public class GameManager : MonoBehaviour
     }
     public void AddMoney()
     {
-        ADNCoin += 100;
+        
     }
 
     public void Load()
     {
-        
-        firstTime = PlayerPrefs.GetInt("FirstTime");
-        ADNCoin = PlayerPrefs.GetInt("ANDCoings");
+        ADNCoin = PlayerPrefs.GetInt("ANDCoings", ADNCoin);
         /*
                 Debug.Log("SelectedHeadIndex" + PlayerPrefs.GetInt("SelectedCharacterHead") );
                 Debug.Log("SelectedBodyIndex" + PlayerPrefs.GetInt("SelectedCharacterBody"));
@@ -53,12 +53,12 @@ public class GameManager : MonoBehaviour
 
         Characters newCharacter = new Characters();
         newCharacter.characterName = "nombre";
-        newCharacter.head = Models[PlayerPrefs.GetInt("SelectedCharacterHead")];
-        newCharacter.body = Models[PlayerPrefs.GetInt("SelectedCharacterBody")];
-        newCharacter.legs = Models[PlayerPrefs.GetInt("SelectedCharacterLegs")]; 
-        newCharacter.headMat = Materials[PlayerPrefs.GetInt("SelectedCharacterHeadMat")];
-        newCharacter.bodyMat = Materials[PlayerPrefs.GetInt("SelectedCharacterBodyMat")];
-        newCharacter.legsMat = Materials[PlayerPrefs.GetInt("SelectedCharacterLegsMat")];
+        newCharacter.head = Models[PlayerPrefs.GetInt("SelectedCharacterHead", cabezaGallina)];
+        newCharacter.body = Models[PlayerPrefs.GetInt("SelectedCharacterBody", cuerpoGallina)];
+        newCharacter.legs = Models[PlayerPrefs.GetInt("SelectedCharacterLegs", piernasGallina)]; 
+        newCharacter.headMat = Materials[PlayerPrefs.GetInt("SelectedCharacterHeadMat", matGallina)];
+        newCharacter.bodyMat = Materials[PlayerPrefs.GetInt("SelectedCharacterBodyMat", matGallina)];
+        newCharacter.legsMat = Materials[PlayerPrefs.GetInt("SelectedCharacterLegsMat", matGallina)];
         selectedCharacter = newCharacter;
 
         for (int i = 0; i < PlayerPrefs.GetInt("ownedCharactesQuantity"); i++)
@@ -143,50 +143,53 @@ public class GameManager : MonoBehaviour
 
     void SaveCharacter(int index)
     {
+        
         int HeadId = 0;
         int BodyId = 0;
         int LegsId = 0;
         for (int i = 0; i < Models.Count; i++)
         {
-            if (Models[i] == ownedCharacters[i].head)
+            if (Models[i] == ownedCharacters[index].head)
             {
                 HeadId = i;
             }
-            if (Models[i] == ownedCharacters[i].body)
+            if (Models[i] == ownedCharacters[index].body)
             {
                 BodyId = i;
             }
-            if (Models[i] == ownedCharacters[i].legs)
+            if (Models[i] == ownedCharacters[index].legs)
             {
                 LegsId = i;
             }
         }
-        PlayerPrefs.SetInt("OwnedCharacterHead" + index, HeadId);
-        PlayerPrefs.SetInt("OwnedCharacterBody" + index, BodyId);
-        PlayerPrefs.SetInt("OwnedCharacterLegs" + index, LegsId);
+        PlayerPrefs.SetInt("OwnedCharacterHead" + index.ToString(), HeadId);
+        PlayerPrefs.SetInt("OwnedCharacterBody" + index.ToString(), BodyId);
+        PlayerPrefs.SetInt("OwnedCharacterLegs" + index.ToString(), LegsId);
 
         int HeadMatId = 0;
         int BodyMatId = 0;
         int LegsMatId = 0;
         for (int i = 0; i < Materials.Count; i++)
         {
-            if (Materials[i] == ownedCharacters[i].headMat)
+            if (Materials[i] == ownedCharacters[index].headMat)
             {
                 HeadMatId = i;
             }
-            if (Materials[i] == ownedCharacters[i].bodyMat)
+            if (Materials[i] == ownedCharacters[index].bodyMat)
             {
                 BodyMatId = i;
             }
-            if (Materials[i] == ownedCharacters[i].legsMat)
+            if (Materials[i] == ownedCharacters[index].legsMat)
             {
                 LegsMatId = i;
             }
         }
-        PlayerPrefs.SetInt("OwnedCharacterHeadMat" + index, HeadMatId);
-        PlayerPrefs.SetInt("OwnedCharacterBodyMat" + index, BodyMatId);
-        PlayerPrefs.SetInt("OwnedCharacterLegsMat" + index, LegsMatId);
+        PlayerPrefs.SetInt("OwnedCharacterHeadMat" + index.ToString(), HeadMatId);
+        PlayerPrefs.SetInt("OwnedCharacterBodyMat" + index.ToString(), BodyMatId);
+        PlayerPrefs.SetInt("OwnedCharacterLegsMat" + index.ToString(), LegsMatId);
 
+
+        
 
     }
     public void restartSave()
