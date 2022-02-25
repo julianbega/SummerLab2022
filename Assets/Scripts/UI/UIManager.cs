@@ -6,6 +6,7 @@ using System;
 using System.Collections;
 using UnityEngine.EventSystems;
 
+
 public class UIManager : MonoBehaviour
 {
     public GameObject minigamesPanel;
@@ -21,13 +22,33 @@ public class UIManager : MonoBehaviour
     Vector3 pos;
     Quaternion rot;
     Vector3 scale;
+
     private void Start()
     {
         gm = FindObjectOfType<GameManager>();
-        money.text = ":  :" + gm.ADNCoin;
         pos = new Vector3(0f, 0f, -0.1f);
         scale = new Vector3(2.5f, 2.5f, 2.5f);
         rot = new Quaternion(0, 180, 0, 0);
+        StartCoroutine("LateStart");
+    }
+    
+
+    public void showMenu()
+    {
+        mainMenuPanel.SetActive(true);
+        minigamesPanel.SetActive(false);
+    }
+    public void hideMenu()
+    {
+        mainMenuPanel.SetActive(false);
+        minigamesPanel.SetActive(true);
+    }
+
+    IEnumerator LateStart()
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        money.text = ":  :" + gm.ADNCoin;
         if (gm.selectedCharacter != null)
         {
             characterHead = Instantiate(gm.selectedCharacter.head, pos, rot);
@@ -41,16 +62,4 @@ public class UIManager : MonoBehaviour
             characterLegs.transform.localScale = scale;
         }
     }
-
-    public void showMenu()
-    {
-        mainMenuPanel.SetActive(true);
-        minigamesPanel.SetActive(false);
-    }
-    public void hideMenu()
-    {
-        mainMenuPanel.SetActive(false);
-        minigamesPanel.SetActive(true);
-    }
-
 }

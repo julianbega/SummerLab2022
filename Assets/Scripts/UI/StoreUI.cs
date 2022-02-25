@@ -48,6 +48,6 @@ public class StoreUI : MonoBehaviour
     }
     public void UpdateMoney()
     {
-        money.text = ":" + +gm.ADNCoin;
+        money.text = ":" + gm.ADNCoin;
     }
 }

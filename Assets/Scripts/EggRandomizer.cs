@@ -14,16 +14,18 @@ public class EggRandomizer : MonoBehaviour
     public Material selectedBodyMat;
     public Material selectedHeadMat;
     public Material selectedLegMat;
+    public ShopManager SM;
 
     private void Start()
     {
+        SM = FindObjectOfType<ShopManager>();
         gm = FindObjectOfType<GameManager>();
     }
     public void randomize()
     {
-        if (gm.ADNCoin >= eggSelected.price)
+        if (gm.ADNCoin >= SM.selectedEgg.price)
         {
-            gm.ADNCoin -= eggSelected.price;
+            gm.ADNCoin -= SM.selectedEgg.price;
 
 
 
