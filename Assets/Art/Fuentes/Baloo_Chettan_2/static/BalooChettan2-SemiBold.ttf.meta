@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: bbec2c6c30ad0784484914c7930c568f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Baloo Chettan 2
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: bbb20a0f9b6f64649b9f586cd26d7055, type: 3}
+  - {fileID: 12800000, guid: 91aeb93788e31964c8eccbd31dae6e35, type: 3}
+  - {fileID: 12800000, guid: 93d20bb9a0f61374b89b717554588cab, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

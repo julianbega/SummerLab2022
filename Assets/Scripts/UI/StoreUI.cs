@@ -26,8 +26,13 @@ public class StoreUI : MonoBehaviour
             eggPrice.text = "Price: " + sm.selectedEgg.price;
             eggName.text = "" + sm.selectedEgg.name;
         }
-    }
 
+        EggRandomizer.NoMoney += MoneyBlink;
+    }
+    private void OnDisable()
+    {
+        EggRandomizer.NoMoney -= MoneyBlink;
+    }
     private void Update()
     {
         if (!hasEggSelected)
@@ -49,5 +54,21 @@ public class StoreUI : MonoBehaviour
     public void UpdateMoney()
     {
         money.text = ":" + gm.ADNCoin;
+    }
+
+    public void MoneyBlink()
+    {
+        money.color = Color.red;
+        StartCoroutine("Blink");
+    }
+
+    IEnumerator Blink()
+    {
+        yield return new WaitForSeconds(0.2f);
+        money.color = Color.white;
+        yield return new WaitForSeconds(0.2f);
+        money.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        money.color = Color.white;
     }
 }

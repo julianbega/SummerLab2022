@@ -13,6 +13,7 @@ public class MinigamesUI : MonoBehaviour
     public GameObject dificultyPanel;
     public GameObject victoryPanel;
     public GameObject defeatPanel;
+    public GameObject HowToPlay;
     public TextMeshProUGUI time;
     public TextMeshProUGUI target;
     public TextMeshProUGUI targetsLeft;
@@ -70,5 +71,14 @@ public class MinigamesUI : MonoBehaviour
     {
         Debug.Log(" hide defeat");
         defeatPanel.SetActive(false);
+    }
+
+    public void OpenHowToPlay()
+    {
+        HowToPlay.SetActive(true);
+    }
+    public void CloseHowToPlay()
+    {
+        HowToPlay.SetActive(false);
     }
 }

@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.Collections;
 
 public class EggRandomizer : MonoBehaviour
 {
@@ -15,6 +15,7 @@ public class EggRandomizer : MonoBehaviour
     public Material selectedHeadMat;
     public Material selectedLegMat;
     public ShopManager SM;
+    static public event Action NoMoney;
 
     private void Start()
     {
@@ -45,12 +46,17 @@ public class EggRandomizer : MonoBehaviour
 
         gm.ownedCharacters.Add(newCharacter);
         }
+        else
+        {
+            // sonido de que falta plata
+            NoMoney?.Invoke();
+        }
     }
 
     public void RandomizeHead()
     {
-        selectedNumber = Random.Range(0.00f, 100.00f);
-        matSelectedNumber = Random.Range(0.00f, 100.00f);
+        selectedNumber = UnityEngine.Random.Range(0.00f, 100.00f);
+        matSelectedNumber = UnityEngine.Random.Range(0.00f, 100.00f);
 
         for (int j = 0; j < eggSelected.head.Count; j++)
         {
@@ -83,8 +89,8 @@ public class EggRandomizer : MonoBehaviour
 
     public void RandomizeBody()
     {
-        selectedNumber = Random.Range(0.00f, 100.00f);
-        matSelectedNumber = Random.Range(0.00f, 100.00f);
+        selectedNumber = UnityEngine.Random.Range(0.00f, 100.00f);
+        matSelectedNumber = UnityEngine.Random.Range(0.00f, 100.00f);
 
         for (int i = 0; i < eggSelected.body.Count; i++)
         {
@@ -113,8 +119,8 @@ public class EggRandomizer : MonoBehaviour
 
     public void RandomizeLegs()
     {
-        selectedNumber = Random.Range(0.00f, 100.00f);
-        matSelectedNumber = Random.Range(0.00f, 100.00f);
+        selectedNumber = UnityEngine.Random.Range(0.00f, 100.00f);
+        matSelectedNumber = UnityEngine.Random.Range(0.00f, 100.00f);
 
         for (int l = 0; l < eggSelected.legs.Count; l++)
         {

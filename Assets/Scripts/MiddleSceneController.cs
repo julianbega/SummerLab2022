@@ -29,6 +29,12 @@ public class MiddleSceneController : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
         setVertical();
     }
+    public void GoToGallery()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Gallery");
+        setVertical();
+    }
 
     public void ExitGame()
     {
