@@ -830,9 +830,9 @@ MonoBehaviour:
   m_text: "\n\t Francisco Imperioso\t\t\t\t      Sim\xF3n Schneebeli\n\t\t\t\t\t\t\t                                
     Nicol\xE1s Pol\n\n\t\tJuli\xE1n Bega\t \t\t\t   \t\tSergio Baretto\n\t\t\t\t\t\t\t\t                
     Hern\xE1n Fern\xE1ndez\t\t\n                                                                            
-    \t\t\tGerm\xE1n Nobile\n\t       Lorena Fiorence      \t\t\t\t\tLautaro Maciel\n\tGuido
-    Garc\xEDa Catt\xE1neo\t\t\t\tImage Campus Teachers\n\t         Juli\xE1n Suarez 
-    \t\t\t\t\t\t     And Staff"
+    \t\t\tGerm\xE1n Nobile\n\t      Lorena Fiorence \t\t\t\t        Eugenio Taboada\n\tGuido
+    Garc\xEDa Catt\xE1neo            \t\t\tLautaro Maciel\n\t\tJuli\xE1n Suarez\t\t\t\t\tImage
+    Campus Teachers\n\t           \t\t\t\t\t\t\t\t     And Staff"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: efe99f8b136a86c40a58fe4dfdae3bb2, type: 2}
   m_sharedMaterial: {fileID: 3714205882289953025, guid: efe99f8b136a86c40a58fe4dfdae3bb2, type: 2}
