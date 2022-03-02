@@ -11,7 +11,12 @@ public class Bomb : MonoBehaviour
     public float speed;
     private void Start()
     {
+        FoodDropManager.destroyAllGo += DeleteThis;
         die = false;
+    }
+    private void OnDisable()
+    {
+        FoodDropManager.destroyAllGo -= DeleteThis;
     }
     private void Update()
     {
@@ -34,5 +39,8 @@ public class Bomb : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-
+    void DeleteThis()
+    {
+        Destroy(this.gameObject);
+    }
 }

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MiddleSceneController : MonoBehaviour
 {
-    public SceneController controller;
+    SceneController controller;
     public void Start()
     {
         controller = FindObjectOfType<SceneController>();

@@ -38,9 +38,9 @@ public class GameManager : MonoBehaviour
     {
         Save();
     }
-    public void AddMoney()
+    public void AddMoney(int moneyToAdd)
     {
-        
+        ADNCoin += moneyToAdd;
     }
 
     public void Load()

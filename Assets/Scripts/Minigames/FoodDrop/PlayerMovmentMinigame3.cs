@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMovmentMinigame3 : MonoBehaviour
 {
     public float playerSpeed;
-    Vector2 mousePos;
     public GameObject canasta;
     public GameObject character;
 
