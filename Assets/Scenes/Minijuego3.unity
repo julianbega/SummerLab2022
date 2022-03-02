@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41733aeedfad7634182066d143952f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 1
+  playerSpeed: 1.5
   canasta: {fileID: 1237524677}
   character: {fileID: 69138181}
 --- !u!114 &39979758
