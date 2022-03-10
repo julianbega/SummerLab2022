@@ -44,6 +44,11 @@ public class UIManager : MonoBehaviour
         minigamesPanel.SetActive(true);
     }
 
+    public void ButtonPressed()
+    {
+        AudioManager.amInstance.music.PlayOneShot(AudioManager.amInstance.sfx[1]);
+    }
+
     IEnumerator LateStart()
     {
         yield return new WaitForSeconds(0.2f);

@@ -121,6 +121,7 @@ public class FoodDropManager : MonoBehaviour
     void GainPoints()
     {
         points++;
+
     }
 
     void LoseHP()

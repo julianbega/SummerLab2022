@@ -26,6 +26,7 @@ public class EggRandomizer : MonoBehaviour
     {
         if (gm.ADNCoin >= SM.selectedEgg.price)
         {
+            AudioManager.amInstance.music.PlayOneShot(AudioManager.amInstance.sfx[0]);
             gm.ADNCoin -= SM.selectedEgg.price;
 
 
