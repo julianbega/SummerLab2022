@@ -164,7 +164,7 @@ public class MemotestManager : MonoBehaviour
         victoy = true;
         started = false;
         timer = -100;
-        
+        AudioManager.amInstance.music.PlayOneShot(AudioManager.amInstance.sfx[3]);
     }
     IEnumerator WaitDefeat()
     {
