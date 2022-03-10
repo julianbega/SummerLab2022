@@ -1104,6 +1104,8 @@ MonoBehaviour:
   sfx:
   - {fileID: 8300000, guid: 8e8b0f1bf92886c44a39b2ff253ca06e, type: 3}
   - {fileID: 8300000, guid: 806d3f27212c91440a4ebd76bf72f3b7, type: 3}
+  - {fileID: 8300000, guid: 962ba6d243da8164880558ef846aeb32, type: 3}
+  - {fileID: 8300000, guid: 5ef933951891a0f44afd7696c4306904, type: 3}
 --- !u!1 &649873045
 GameObject:
   m_ObjectHideFlags: 0

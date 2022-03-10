@@ -153,7 +153,7 @@ public class MemotestManager : MonoBehaviour
     }
     public void Victory()
     {
-      
+        //AudioManager.amInstance.music.PlayOneShot(AudioManager.amInstance.sfx[4]);
         StartCoroutine("WaitVictory");
     }
 
@@ -180,6 +180,8 @@ public class MemotestManager : MonoBehaviour
         victoy = false;
         defeat = false;
         started = false;
+        notTargets.Clear();
+        target = null;
         InitLevel();
     }
 }

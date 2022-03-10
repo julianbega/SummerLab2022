@@ -1714,7 +1714,7 @@ MonoBehaviour:
   target: {fileID: 1431269615}
   targetsLeft: {fileID: 129790015}
   money: {fileID: 2462172307314663573}
-  moneyGained: {fileID: 0}
+  moneyGained: {fileID: 1320059641}
   mm: {fileID: 101805976}
   foodIcon: {fileID: 1614461164}
   secret: {fileID: 21300000, guid: 2785878aa26238043baf95318545e1e7, type: 3}
@@ -1730,7 +1730,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a1bbc05273e8f4aa36e02c425e2a6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
 --- !u!1 &710741019
 GameObject:
   m_ObjectHideFlags: 0

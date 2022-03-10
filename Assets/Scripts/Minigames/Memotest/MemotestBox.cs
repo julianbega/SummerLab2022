@@ -72,6 +72,7 @@ public class MemotestBox : MonoBehaviour
                 if (!alreadyDestroyed) 
                 {
                     mm.targetCount--;
+                   // AudioManager.amInstance.music.PlayOneShot(AudioManager.amInstance.sfx[3]);
                 }
                 alreadyDestroyed = true;
                 this.transform.SetPositionAndRotation(this.transform.position, new Quaternion(0, 0, 0, 0));
