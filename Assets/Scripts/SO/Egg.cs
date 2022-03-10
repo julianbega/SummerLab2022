@@ -20,7 +20,7 @@ public class matChance
 [CreateAssetMenu]
 public class Egg : ScriptableObject
 {
-    public string name;
+    public string eggName;
     public GameObject EggPrefab;
     public int price;
     public List<partChance> head;

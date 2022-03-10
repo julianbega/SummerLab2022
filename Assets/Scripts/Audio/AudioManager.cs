@@ -7,7 +7,8 @@ public class AudioManager : MonoBehaviour
     public static AudioManager amInstance;
 
     public AudioSource music;
-    public List<AudioClip> sfx;
+    public AudioSource SFX;
+    public List<AudioClip> sfxList;
     private void Awake()
     {
         if(amInstance != null)
@@ -29,11 +30,11 @@ public class AudioManager : MonoBehaviour
     }
     public void MuteSFX()
     {
-
+        SFX.volume = 0;
     }
     public void UnMuteSFX()
     {
-
+        SFX.volume = 1;
     }
 
 }

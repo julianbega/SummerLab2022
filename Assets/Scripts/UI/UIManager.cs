@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
 
     public TextMeshProUGUI money;
     private GameManager gm;
+    private AudioManager am;
 
     GameObject characterHead;
     GameObject characterBody;
@@ -26,6 +27,7 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         gm = FindObjectOfType<GameManager>();
+        am = FindObjectOfType<AudioManager>();
         pos = new Vector3(0f, 0f, -0.1f);
         scale = new Vector3(2.5f, 2.5f, 2.5f);
         rot = new Quaternion(0, 180, 0, 0);
@@ -46,7 +48,7 @@ public class UIManager : MonoBehaviour
 
     public void ButtonPressed()
     {
-        AudioManager.amInstance.music.PlayOneShot(AudioManager.amInstance.sfx[1]);
+        AudioManager.amInstance.SFX.PlayOneShot(AudioManager.amInstance.sfxList[1]);
     }
 
     IEnumerator LateStart()
@@ -67,4 +69,25 @@ public class UIManager : MonoBehaviour
             characterLegs.transform.localScale = scale;
         }
     }
+
+
+    public void OnOffMusic()
+    {
+        if (am.music.volume == 0)
+        {
+            am.UnMuteMusic();
+            return;
+        }
+        am.MuteMusic();
+    }
+    public void OnOffSFX()
+    {
+        if (am.SFX.volume == 0)
+        {
+            am.UnMuteSFX();
+            return;
+        }
+        am.MuteSFX();
+    }
+
 }

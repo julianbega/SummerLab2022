@@ -76,7 +76,7 @@ public class MemotestBox : MonoBehaviour
                 alreadyDestroyed = true;
                 this.transform.SetPositionAndRotation(this.transform.position, new Quaternion(0, 0, 0, 0));
                 StartCoroutine("DestroyBox");
-                AudioManager.amInstance.music.PlayOneShot(AudioManager.amInstance.sfx[2]);
+                AudioManager.amInstance.SFX.PlayOneShot(AudioManager.amInstance.sfxList[2]);
             }
             else
             {
